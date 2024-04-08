@@ -1,0 +1,56 @@
+.form {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-left: 27%;
+    width: 650px;
+    height: auto;
+    background-color: rgb(76, 163, 239);
+    border-radius: 20px;
+    box-shadow: 0 5px 30px;
+}
+
+label {
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(43, 85, 163)
+}
+
+
+.sign-up-log {
+    width: 100%;
+}
+
+.confirmation {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.confirmation label {
+    margin: 20px;
+}
+
+
+.sign-up-log h1 {
+    height: 60px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color:rgb(43, 85, 163);  
+}
+
+.sign-up-log {
+    margin-bottom: 20px;
+}
+
+.form input[type="password"]:hover, .form input[type="password"]:focus {
+    width: 202px;
+}
+
+
+

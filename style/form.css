@@ -1,0 +1,124 @@
+.form-container {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    /* background-color: azure; */
+    background-image: url('../image/cn.jpg');
+    background-size: 400px 600px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    /* line-height: normal; */
+    margin: 15% 30%;
+    width: 40%;
+    height: 430px;
+    /* text-align: center; */
+    padding: 20px;
+    padding-left: 0px;
+    background-color:cornflowerblue;
+    border-width: 3px;
+    border-style: solid;
+    border-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 5px 40px rgb(31, 30, 30);
+}
+
+
+
+
+.text-elements {
+    margin-top: -20px;
+    width: 100%;
+    text-align: center;
+}
+
+.sign-in-label {
+    height: 60px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    /* background-color: aqua; */
+}
+
+.sign-in {
+    width: 100%;
+    text-align: center;
+}
+
+.sign-in ul {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    margin-left: 15%;
+    text-wrap: wrap; 
+}
+
+.sign-in ul li img {
+    margin: 2px;
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.social-list{
+    width: 100%;
+}
+
+.sign-in ul li{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    list-style-type:none;
+    margin-right: 5px;
+}
+
+.sign-in ul li a{
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+.sign-in input[type="submit"] {
+    width: 120px;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 25px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 40px;
+    background-color: rgb(155, 181, 228);
+    box-shadow: 0 5px 25px black;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.sign-in input[type="submit"]:hover{
+    width: 127px;
+    height: 57px;
+} */
+
+.sign-in em {
+    cursor: pointer;
+    color: rgb(177, 218, 255);
+    text-decoration: none;
+    font-style: normal;
+    transition: 0.4s;
+}
+
+.sign-in em:hover {
+    font-size: 20px;
+}
+
+

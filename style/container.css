@@ -1,0 +1,140 @@
+.site-link {
+    /* display: flex; */
+    display: flex;
+    flex-direction: row;
+    color: rgb(6, 222, 222);
+    text-decoration: none;
+}
+.site-name div {
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+    margin-left: -140px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    margin-top: 8%;
+    width: 95%;
+    height:auto;
+    /* opacity: 0.7; */
+    border-radius: 10px;
+    background:linear-gradient(to right, rgb(30, 216, 157)30%, rgb(32, 32, 165));
+
+}
+
+.site-description {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto auto 20px;
+    padding: 10px;
+    /* background-color: rgb(171, 180, 187); */
+    background-image: url('../image/NARUTO.jpg');
+    background-repeat: none;
+    background-size: 200px 300px;
+    color: azure;
+    width: 95%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.site-description p{
+    background-color: rgb(54, 73, 90);
+}
+
+.paragraph {
+    text-wrap:wrap;
+    width: 60%;
+    height: auto;
+    margin: 15px;
+    margin-left: 2%;
+    padding: 20px;
+    background-color: rgb(29, 66, 99);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px;
+}
+
+p {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 35px;
+}
+
+.paragraph p {
+    margin-left:2%;
+    background-color: lightslategray;
+    color: rgb(0, 42, 64);
+    width: 80%;
+}
+
+
+.content .manga {
+    width: 40%;
+    text-align: center;
+    line-height: normal;
+    margin-left: 8%;
+}
+
+
+.button {
+    margin: 5px;
+    width: auto;
+    margin-left:73% ;
+    margin-top: -24%;
+}
+
+.paragraph button {
+    margin-left: 70%;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: blueviolet;
+    color: aliceblue;
+    transition: 0.5s;
+}
+.paragraph button:hover{
+    height: 34px;
+    opacity: 0.8;
+    background-color: rgb(245, 172, 172);
+    color: #1f1c1c;
+    box-shadow: 0 3px 30px;
+}
+
+
+
+
+.button button{
+    line-height: normal;
+    padding-bottom: 5px;
+    width: 170px;
+    height: 70px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    background-color: rgb(215, 118, 0) ;
+    color: aliceblue;
+    border-radius: 40px;
+    box-shadow: 0 5px 25px black;
+    transition: 0.6s ease-in-out;
+}
+
+.button button:hover {
+    background-color: rgb(134, 82, 183);
+    width: 175px;
+    height: 75px;
+    color: #1f1c1c;
+    box-shadow: 0 5px 30px;
+}
+
+button, input[type="Button"] { 
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
