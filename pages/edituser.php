@@ -1,18 +1,21 @@
-
 <?php
     session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manga.site</title>
-        <link rel="stylesheet" href="../style/style.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../style/container.css">
         <link rel="stylesheet" href="../style/product.css">
+        <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/inputs.css">
     </head>
     <body>
-        <nav class="nav-main">
+    <nav class="nav-main">
             <div class="btn-toggle-nav" onclick="toggleNav()"></div>
             <ul>
                 <li>
@@ -34,23 +37,29 @@
                     </span>
                 </li>
                 <li><a href='./home.php'>Home</a></li>
-                <li><a href='#'>View Manga Records</a></li>
-                <li><a href='#'>Add Manga</a></li>
+                <li><a href='./userprofiles.php'>User Profiles</a></li>
                 <li><a href="./clientprofile.php">Edit Profile</a></li>
                 <li><a href="./changepassword.php">Change Password</a></li>
             </ul>
         </aside>
+        
+
         <div  class='tile-container'>
 
-            <div class="current-profile" style="height:auto;">
-
-                <form action="../php-code/ph.co.php" method="post" enctype="multipart/form-data" class="updateform">
+        <div class="form-container1" style ="margin-top: -100px;">
+                
+                <form action="<?php
+                        if (isset($_GET['email'])){
+                            echo '../php-code/updateuser.co.php';
+                        }
+                         else {
+                            echo '../php-code/saveuser.co.php';
+                         }       
+                ?>" method="post" class="updateform" id='form'>
                     <div class="sign-up-log">
-                        <h1 Style = "color:aliceblue">Manga</h1>
-                        Please fill in this form to upload Manga.
-                    </div>
-                    <div style="width:100%">
+                        <h1 style = "color:aliceblue">USERS</h1>
                         <?php
+                                                        
                             if (isset($_SESSION['message'])){
                                 echo "
                                 <div style= 'color:#22f229'>
@@ -68,30 +77,28 @@
                             unset($_SESSION['message']);
                             ?>
                     </div>
-                    <div style="width:fit-content; margin-left:19%; text-align:left;">
-                        <input type="text" name="name" placeholder="Title">
-                        <textarea style = '
-                        width:200px;
-                        margin: 10px;
-                        padding: 10px;
-                        margin-bottom:20px;' name="description" placeholder="Description"></textarea>
-                        <input type="text" name="price" placeholder="$12.00">
-                        <input type="file" name="file"
-                        style = '
-                        width:200px;
-                        margin: 10px;
-                        padding: 10px;
-                        margin-bottom:30px;
-                        background-color:aliceblue; 
-                        border-radius:20px;
-                        color:black'>
-                        <input style ="margin-left:19%;" type="submit" name="submit" value="Save">
+                    
+                    <?php 
+                        include_once '../php-code/formcreater.co.php';
+
+                        if (isset($_GET['email'])){
+                            $_SESSION['user-id'] = $_GET['user-id'];
+                            $email = $_GET['email'];
+                            $_SESSION['user-email'] = $email;
+                            createPopulatedForm($email);
+                        }
+                        else {
+                            createEmptyform();
+                        }                
+                    ?>
+                    <div style="width:100%; height:auto; margin-top:10px;">
+                        <input type="submit" value="Update" name="Submit">
                     </div>
+                   
                 </form>
             </div>
         </div>
         <script src="../js-code/products.co.js"></script>
         <script src="../js-code/main.js" ></script>
-            
-</body>
+    </body>
 </html>

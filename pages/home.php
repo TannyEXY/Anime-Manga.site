@@ -32,6 +32,8 @@
                         echo $_SESSION["user-name"];
                     ?></span></li>
                 <li><a href="./clientprofile.php">Edit Profile</a></li>
+                <li><a href="./userprofiles.php">View Users</a></li>
+                <li><a href="./edituser.php">Add User Profile</a></li>
                 <li><a href="./mangaupload.php">Add Manga products</a></li>
                 <li><a href="#">View Manga Products</a></li>
                 <li><a href="./changepassword.php">Change Password</a></li>

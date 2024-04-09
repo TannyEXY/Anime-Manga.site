@@ -1,4 +1,7 @@
 <?php
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
     include './config.sesssion.co.php';
     include "./mysql.con.php";
     include_once "./dbcontrol.co.php";
@@ -37,3 +40,9 @@
             }    
         }
     }
+
+}
+else {
+   header('Location: ../index.php');
+   die();
+}

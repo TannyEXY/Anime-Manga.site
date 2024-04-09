@@ -4,7 +4,7 @@
             WHERE email = '".$email."'";
             $rows = mysqli_query($con,$query);
             foreach($rows as $row):
-                $user = array($row["firstname"],$row["lastname"],$row["email"],$row["dob"],$row["phone"]);
+                $user = array($row["firstname"],$row["lastname"],$row["email"],$row["dob"],$row["phone"],$row['usertype']);
                 return $user;
             endforeach;
         }
@@ -48,3 +48,14 @@
                 return $e->getMessage();
             }
         }
+
+
+        function isEmailTaken($con,$email){
+            $query = "SELECT * FROM  users WHERE email = '$email'";
+            $result = mysqli_query($con,$query);
+            if (mysqli_num_rows($result) === 1){
+                return true;
+            }
+            return false;
+        }
+        

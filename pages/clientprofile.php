@@ -43,17 +43,16 @@
                         ?>
                     </span>
                 </li>
-                <li><a href="#">Edit Profile</a></li>
                 <li><?php
 
                             if ($_SESSION["user-type"] == "admin"){
-                                echo "<a href='./home.php'>Manga products</a></li>";
+                                echo "<a href='./home.php'>Home</a></li>";
                             } else {
                                 echo "<a href='./products.php'>Manga products</a></li>
                                 <li><a href='#'>Purchase History</a></li>";
                             }                 
                 ?>
-                
+                <li><a href="#">Edit Profile</a></li>
                 <li><a href="./changepassword.php">Change Password</a></li>
             </ul>
         </aside>
